@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:note_toker_app/screens/home_screen.dart';
+import 'package:note_toker_app/screens/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -127,7 +129,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   onPressed: () {
                     //Diiwaan gelinta kadib tag HomeScreen
-                    Navigator.pushReplacementNamed(context, '/home');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (contex) => HomeScreen()),
+                    );
                   },
                   child: const Text("Register"),
                 ),
@@ -139,10 +144,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const Text(" "),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, '/login');
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => LoginScreen(),
+                          ),
+                        );
                       },
                       child: const Text(
-                        "",
+                        "Login",
                         style: TextStyle(
                           color: Colors.blueAccent,
                           fontWeight: FontWeight.bold,
@@ -151,6 +161,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ],
                 ),
+                // Row(
+                //   children: [
+                //     Text("Go back to "),
+                //     TextButton(
+                //       onPressed: () {
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //             builder: (context) => LoginScreen(),
+                //           ),
+                //         );
+                //       },
+                //       child: Text("Login"),
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),

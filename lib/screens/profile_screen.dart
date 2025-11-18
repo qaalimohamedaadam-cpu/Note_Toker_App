@@ -15,10 +15,7 @@ class ProfileScreen extends StatelessWidget {
             children: [
               const Text(
                 "Profile",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 20),
 
@@ -28,7 +25,11 @@ class ProfileScreen extends StatelessWidget {
                   const CircleAvatar(
                     radius: 35,
                     backgroundColor: Color(0xFFE0E0E0),
-                    child: Icon(Icons.person, size: 40, color: Colors.blueAccent),
+                    child: Icon(
+                      Icons.person,
+                      size: 40,
+                      color: Colors.blueAccent,
+                    ),
                   ),
                   const SizedBox(width: 15),
                   Column(
@@ -37,7 +38,9 @@ class ProfileScreen extends StatelessWidget {
                       Text(
                         "Abdi",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                       Text(
                         "abdi@gmail.com",
@@ -76,13 +79,19 @@ class ProfileScreen extends StatelessWidget {
               Center(
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
+                    backgroundColor: Colors.blue,
+                    foregroundColor: Colors.white,
                     minimumSize: const Size(double.infinity, 50),
                     side: const BorderSide(color: Colors.blueAccent),
                   ),
                   onPressed: () {},
                   child: const Text(
                     "Log out",
-                    style: TextStyle(color: Colors.blueAccent),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
               ),

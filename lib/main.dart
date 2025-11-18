@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_toker_app/screens/DashboardScreen.dart';
-import 'package:note_toker_app/screens/AdminScreen.dart';
-import 'package:note_toker_app/screens/HomeScreen.dart';
-import 'package:note_toker_app/screens/LoginScreen.dart';
-import 'package:note_toker_app/screens/ProfileScreen.dart';
-import 'package:note_toker_app/screens/createNote.dart';
-import 'package:note_toker_app/screens/main_navigation_Screen.dart';
+import 'package:note_toker_app/screens/login_screen.dart';
 
 void main() {
   runApp(const NoteTakerApp());

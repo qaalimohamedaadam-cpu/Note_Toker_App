@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -59,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 20),
 
               // Notes Grid
               Expanded(
@@ -74,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   itemBuilder: (context, index) {
                     final note = notes[index];
                     return Container(
-                      padding: const EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(18),
                       decoration: BoxDecoration(
                         color: Color(int.parse(note["color"]!)),
                         borderRadius: BorderRadius.circular(16),
@@ -86,15 +85,15 @@ class HomeScreen extends StatelessWidget {
                             note["title"]!,
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                              fontSize: 22,
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          const SizedBox(height: 16),
                           Expanded(
                             child: Text(
                               note["content"]!,
                               style: const TextStyle(
-                                fontSize: 13,
+                                fontSize: 18,
                                 color: Colors.black87,
                               ),
                             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'AdminScreen.dart';
+import 'package:note_toker_app/screens/admin_screen.dart';
+// import 'AdminScreen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:note_toker_app/screens/createNote.dart';
-import 'AdminScreen.dart';
-import 'DashboardScreen.dart';
-import 'homeScreen.dart';
-import 'profileScreen.dart';
+import 'package:note_toker_app/screens/admin_screen.dart';
+// import 'package:note_toker_app/screens/createNote.dart';
+import 'package:note_toker_app/screens/create_note.dart';
+import 'package:note_toker_app/screens/profile_screen.dart';
+// import 'AdminScreen.dart';
+import 'dashboard_screen.dart';
+import 'home_screen.dart';
+// import 'profileScreen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({super.key});
@@ -34,6 +37,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

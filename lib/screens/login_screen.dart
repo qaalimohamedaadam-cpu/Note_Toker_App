@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'RegisterScreen.dart';
-import 'main_navigation_Screen.dart';
+import 'package:note_toker_app/screens/register_screen.dart';
+// import 'RegisterScreen.dart';
+import 'main_navigation_screen.dart';
 
 
 class LoginScreen extends StatefulWidget {
