@@ -1,16 +1,16 @@
 import Note from "../models/Note.js";
 
 export const createNote = async (req, res) => {
+  const { title, content } = req.body;
   try {
     const note = await Note.create({
-      userId: req.user,
-      title: req.body.title,
-      content: req.body.content,
+     title,
+     content
     });
 
     res.json(note);
   } catch (error) {
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({ message: "Server error" ,});
   }
 };
 
