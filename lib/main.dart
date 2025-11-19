@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:note_toker_app/screens/login_screen.dart';
+import 'package:note_toker_app/presentation/auth/screens/login_screen.dart';
 
 void main() {
   runApp(const NoteTakerApp());
