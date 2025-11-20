@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:note_toker_app/presentation/auth/screens/login_screen.dart';
+import 'package:note_toker_app/presentation/auth/service/user_service.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -75,14 +77,14 @@ class HomeScreen extends StatelessWidget {
                     return Container(
                       padding: const EdgeInsets.all(18),
                       decoration: BoxDecoration(
-                        color: Color(int.parse(note["color"]!)),
+                        color: Color(int.parse(note["color"] ?? "0xFFFFFFFF")),
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            note["title"]!,
+                            note["title"] ?? "",
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 22,
@@ -91,7 +93,7 @@ class HomeScreen extends StatelessWidget {
                           const SizedBox(height: 16),
                           Expanded(
                             child: Text(
-                              note["content"]!,
+                              note["content"] ?? "",
                               style: const TextStyle(
                                 fontSize: 18,
                                 color: Colors.black87,
@@ -103,6 +105,20 @@ class HomeScreen extends StatelessWidget {
                     );
                   },
                 ),
+              ),
+
+              TextButton(
+                onPressed: () async {
+                  Navigator.of(context).pop();
+                  await UserService().logOut(context);
+                  Navigator.of(context).pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => const LoginScreen(),
+                    ),
+                    (route) => false,
+                  );
+                },
+                child: const Text("logout"),
               ),
             ],
           ),

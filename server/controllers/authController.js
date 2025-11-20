@@ -18,6 +18,7 @@ export const createUser = async (req,res)=>{
         success: true,
         data: savedUser,
         message: "User created successfully"
+        
 });
     } catch (error) {
        res.status(500).json({
@@ -53,7 +54,7 @@ export const login = async (req,res) =>{
             success: true,
             data: userExists,
             message: "Login successful",
-            // Token: generateToken(userExists._id)
+          Token: generateToken(userExists._id)
         });
 
     } catch (error) {
